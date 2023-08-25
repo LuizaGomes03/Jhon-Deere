@@ -1,160 +1,78 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+print("Olá! Aqui quem fala é a Deere, seu assistente virtual da John Deere.")
+nome = input("E você, como posso chamá-lo? ")
+print (f"Olá {nome}! Estou aqui para ajudar em diversas questões relacionadas aos tratores John Deere.")
 
-# C extensions
-*.so
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+def escolher_opcao():
+    opcao = input("Para obter mais detalhes sobre um tópico específico, digite o número correspondente (ou 'sair' para encerrar): ")
+    return opcao
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+while True:
+    def mostrar_menu () :
+        print ("Posso te auxiliar com:")
+        print ("1. Dicas de Manutenção Preventiva 🛠")
+        print ("2. Informações sobre Garantia de Peças 🔄")
+        print ("3. Detalhes sobre a Garantia de Fábrica 🏭")
+        print ("4. Orientações sobre o Controle de Painel 📊")
+        print ("5. Manutenção do Trator: O que Você Pode Fazer e Quando Buscar Ajuda")
+        print ("6. Outras informações que você precisar!")
+    mostrar_menu()
+    opcao_selecionada = escolher_opcao()
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+    if opcao_selecionada == "1":
+        # informações sobre manutenção preventiva
+        print("Ótimo! Aqui estão algumas dicas sobre Manutenção Preventiva:\n"
+              "     A manutenção preventiva é essencial para a durabilidade e desempenho do seu trator.\n"
+              " Cada ano de uso, por volta de 350, 600, 1.100, 1.600 ou 2.100 horas, é um lembrete para agendar revisões e cuidados.\n"
+              " Essas horas são oportunidades para evitar problemas maiores e manter o trator operando sem problemas.\n"
+              " Investir agora economiza no longo prazo e mantém o valor do trator.\n"
+              " Priorize a manutenção preventiva para um trator confiável e eficiente")
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+    elif opcao_selecionada == "2":
+        # informações sobre garantia de peças
+        print("Claro! Aqui estão as informações sobre Garantia de Peças:\n"
+              "     A John Deere oferece a garantia definitiva em peças. "
+              " Valorize a integridade de suas máquinas optando pelas peças originais John Deere.\n"
+              " Ao escolher realizar serviços através de nossos concessionários, \n"
+              " você desfruta de uma garantia de 12 meses, assegurando tranquilidade e qualidade em cada manutenção.")
 
-# Translations
-*.mo
-*.pot
+    elif opcao_selecionada == "3":
+        # informações sobre garantia de fábrica
+        print("Certo! Aqui estão os detalhes sobre a Garantia de Fábrica:\n"
+            "     A John Deere oferece garantia de 3 anos ou 2.000 horas de uso.\n"
+            " Válida, exclusivamente, para tratores novos 5E e 5EN, que tenham sido adquiridos na rede autorizada de concessionários\n"
+            " da John Deere no Brasil, que seguirem o plano de manutenção com peças originais e serviços via concessionário\n"
+            " John Deere, bem como que respeitem as regras do Manual do Operador e os Termos de Garantia.")
+    elif opcao_selecionada == "4":
+        # informações sobre o controle de painel
+        print("Entendido! Aqui estão as orientações sobre o Controle de Painel:")
+    elif opcao_selecionada == "5":
+        # Aqui você pode adicionar outras informações
+        print("Vamos falar sobre a Manutenção do Trator? O que Você Pode Fazer e Quando Buscar Ajuda\n"
+            "   Você Pode Fazer:\n"
+            "- Trocar óleo e filtros regularmente.\n"
+            "- Lubrificar pontos de articulação.\n"
+            "- Realizar verificações visuais.\n"
+            "- Substituir peças simples, como lâmpadas e fusíveis.\n"
+            "- Manter o trator limpo.\n"
+            "   Procedimentos com Ajuda Profissional:\n"
+            "- Troca de pneus (requer ferramentas especiais).\n"
+            "- Reparos complexos no motor.\n"
+            "- Problemas eletrônicos avançados.\n"
+            "- Reparos em transmissão e eixo.\n"
+            "- Calibração de sistemas de precisão.\n"
+            "   Lembre-se, é importante saber o que você se sente confortável em fazer. \n"
+            "Se houver dúvidas, é mais seguro procurar ajuda de um profissional. \n"
+            "A manutenção regular garante um trator confiável.\n"
+            " Estamos aqui para te ajudar!")
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
+    elif opcao_selecionada == "6":
+        # outras perguntas ou tópicos
+        print("Você selecionou 'Outros'. Como posso ajudar?")
 
-# Flask stuff:
-instance/
-.webassets-cache
+    elif opcao_selecionada == "sair":
+        print("Obrigado por utilizar nosso assistente virtual. Até mais!")
+        break  # Encerra o loop principal
 
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-.pybuilder/
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
-# .python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
-
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/#use-with-ide
-.pdm.toml
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+    else:
+        print("Desculpe, opção inválida. Por favor, escolha uma opção válida.")

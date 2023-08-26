@@ -1,78 +1,106 @@
-print("Olá! Aqui quem fala é a Deere, seu assistente virtual da John Deere.")
-nome = input("E você, como posso chamá-lo? ")
-print (f"Olá {nome}! Estou aqui para ajudar em diversas questões relacionadas aos tratores John Deere.")
-
+def mostrar_menu():
+    print("Posso te auxiliar com:")
+    print("1. O trator parou")
+    print("2. Trator com defeito")
+    print("3. Dicas de Manutenção Preventiva 🛠")
+    print("4. Informações sobre Garantia de Peças 🔄")
+    print("5. Detalhes sobre a Garantia de Fábrica 🏭")
+    print("6. Orientações sobre o Controle de Painel 📊")
+    print("7. Manutenção do Trator: O que Você Pode Fazer e Quando Buscar Ajuda")
+    print("8. Outras informações que você precisar!")
 
 def escolher_opcao():
     opcao = input("Para obter mais detalhes sobre um tópico específico, digite o número correspondente (ou 'sair' para encerrar): ")
     return opcao
 
-while True:
-    def mostrar_menu () :
-        print ("Posso te auxiliar com:")
-        print ("1. Dicas de Manutenção Preventiva 🛠")
-        print ("2. Informações sobre Garantia de Peças 🔄")
-        print ("3. Detalhes sobre a Garantia de Fábrica 🏭")
-        print ("4. Orientações sobre o Controle de Painel 📊")
-        print ("5. Manutenção do Trator: O que Você Pode Fazer e Quando Buscar Ajuda")
-        print ("6. Outras informações que você precisar!")
-    mostrar_menu()
-    opcao_selecionada = escolher_opcao()
+def conversa_com_robot():
+    print("Olá! Aqui quem fala é a Deere, seu assistente virtual da John Deere.")
+    nome = input("E você, como posso chamá-lo? ")
+    print(f"Olá {nome}! Estou aqui para ajudar em diversas questões relacionadas aos tratores John Deere.")
 
-    if opcao_selecionada == "1":
-        # informações sobre manutenção preventiva
-        print("Ótimo! Aqui estão algumas dicas sobre Manutenção Preventiva:\n"
-              "     A manutenção preventiva é essencial para a durabilidade e desempenho do seu trator.\n"
-              " Cada ano de uso, por volta de 350, 600, 1.100, 1.600 ou 2.100 horas, é um lembrete para agendar revisões e cuidados.\n"
-              " Essas horas são oportunidades para evitar problemas maiores e manter o trator operando sem problemas.\n"
-              " Investir agora economiza no longo prazo e mantém o valor do trator.\n"
-              " Priorize a manutenção preventiva para um trator confiável e eficiente")
+    while True:
+        mostrar_menu()
+        opcao_selecionada = escolher_opcao()
 
-    elif opcao_selecionada == "2":
-        # informações sobre garantia de peças
-        print("Claro! Aqui estão as informações sobre Garantia de Peças:\n"
+        if opcao_selecionada == "1":
+            print("Entendo que o trator parou de funcionar. Vamos resolver isso!")
+            print("Primeiro, verifique se o trator está abastecido com combustível suficiente e se a bateria está carregada.")
+            print("Se esses aspectos estiverem bem, tente reiniciar o trator.")
+            print("Se o problema persistir e você não conseguir identificar a causa, é recomendado entrar em contato")
+            print("com a concessionária John Deere mais próxima para assistência profissional.")
+            print("Além disso, você pode baixar o aplicativo John Deere Connected Support para obter ajuda online.")
+            print("Não hesite em buscar ajuda especializada para solucionar o problema.")
+            # Resto das instruções para a opção 1...
+
+        elif opcao_selecionada == "2":
+            print("""Você selecionou a opção 'Trator com defeito'. Vamos entender melhor o que está acontecendo.\n
+    Por favor, descreva com mais detalhes qual é o problema que você está enfrentando com o trator.
+    Isso nos ajudará a fornecer as orientações adequadas para resolver o defeito.
+    Se possível, mencione qualquer sintoma, barulho ou comportamento incomum que você tenha notado.
+    print("Após fornecer mais informações, estaremos prontos para lhe dar as instruções necessárias.
+    
+    """)
+          
+            # Resto das instruções para a opção 2...
+
+        elif opcao_selecionada == "3":
+           print("Claro! Aqui estão as informações sobre Garantia de Peças:\n"
               "     A John Deere oferece a garantia definitiva em peças. "
               " Valorize a integridade de suas máquinas optando pelas peças originais John Deere.\n"
               " Ao escolher realizar serviços através de nossos concessionários, \n"
               " você desfruta de uma garantia de 12 meses, assegurando tranquilidade e qualidade em cada manutenção.")
+            # Resto das instruções para a opção 3...
 
-    elif opcao_selecionada == "3":
-        # informações sobre garantia de fábrica
-        print("Certo! Aqui estão os detalhes sobre a Garantia de Fábrica:\n"
-            "     A John Deere oferece garantia de 3 anos ou 2.000 horas de uso.\n"
-            " Válida, exclusivamente, para tratores novos 5E e 5EN, que tenham sido adquiridos na rede autorizada de concessionários\n"
-            " da John Deere no Brasil, que seguirem o plano de manutenção com peças originais e serviços via concessionário\n"
-            " John Deere, bem como que respeitem as regras do Manual do Operador e os Termos de Garantia.")
-    elif opcao_selecionada == "4":
-        # informações sobre o controle de painel
-        print("Entendido! Aqui estão as orientações sobre o Controle de Painel:")
-    elif opcao_selecionada == "5":
-        # Aqui você pode adicionar outras informações
-        print("Vamos falar sobre a Manutenção do Trator? O que Você Pode Fazer e Quando Buscar Ajuda\n"
-            "   Você Pode Fazer:\n"
-            "- Trocar óleo e filtros regularmente.\n"
-            "- Lubrificar pontos de articulação.\n"
-            "- Realizar verificações visuais.\n"
-            "- Substituir peças simples, como lâmpadas e fusíveis.\n"
-            "- Manter o trator limpo.\n"
-            "   Procedimentos com Ajuda Profissional:\n"
-            "- Troca de pneus (requer ferramentas especiais).\n"
-            "- Reparos complexos no motor.\n"
-            "- Problemas eletrônicos avançados.\n"
-            "- Reparos em transmissão e eixo.\n"
-            "- Calibração de sistemas de precisão.\n"
-            "   Lembre-se, é importante saber o que você se sente confortável em fazer. \n"
-            "Se houver dúvidas, é mais seguro procurar ajuda de um profissional. \n"
-            "A manutenção regular garante um trator confiável.\n"
-            " Estamos aqui para te ajudar!")
+        elif opcao_selecionada == "4":
+            print("""Certo! Aqui estão os detalhes sobre a Garantia de Fábrica:\n"
+                   A John Deere oferece garantia de 3 anos ou 2.000 horas de uso.\n"
+                   Válida, exclusivamente, para tratores novos 5E e 5EN, que tenham sido adquiridos na rede autorizada de concessionários\n
+                   da John Deere no Brasil, que seguirem o plano de manutenção com peças originais e serviços via concessionário\n
+                  " John Deere, bem como que respeitem as regras do Manual do Operador e os Termos de Garantia.
+                  """)
+          
+        elif opcao_selecionada == "5":
+            print("""
+Certo! Aqui estão os detalhes sobre a Garantia de Fábrica:\n 
+A John Deere oferece garantia de 3 anos ou 2.000 horas de uso.\n Válida, exclusivamente, para tratores novos 5E e 5EN, que tenham sido adquiridos na rede autorizada de concessionários da John Deere no Brasil, que seguirem o plano de manutenção com peças originais e serviços via concessionário. John Deere, bem como que respeitem as regras do Manual do Operador e os Termos de Garantia.
+           """)
+        elif opcao_selecionada == "6":
+            print("Orientações sobre o Controle de Painel:")
+            # Resto das instruções para a opção 6...
 
-    elif opcao_selecionada == "6":
-        # outras perguntas ou tópicos
-        print("Você selecionou 'Outros'. Como posso ajudar?")
+        elif opcao_selecionada == "7":
+            print("""
+         Vamos falar sobre a Manutenção do Trator? 
+         O que Você Pode Fazer e Quando Buscar Ajuda\n
+               Você Pode Fazer:\n
+            - Trocar óleo e filtros regularmente.\n
+            - Lubrificar pontos de articulação.\n
+            - Realizar verificações visuais.\n
+            - Substituir peças simples, como lâmpadas e fusíveis.\n
+            - Manter o trator limpo.\n
+               Procedimentos com Ajuda Profissional:\n
+            - Troca de pneus (requer ferramentas especiais).\n
+            - Reparos complexos no motor.\n
+            - Problemas eletrônicos avançados.\n
+            - Reparos em transmissão e eixo.\n
+            - Calibração de sistemas de precisão.\n
+          Lembre-se, é importante saber o que você se sente               confortável em fazer.\n
+          Se houver dúvidas, é mais seguro procurar ajuda de um           profissional.\n
+          A manutenção regular garante um trator confiável.\n
+          Estamos aqui para te ajudar!
+            """)
+           
 
-    elif opcao_selecionada == "sair":
-        print("Obrigado por utilizar nosso assistente virtual. Até mais!")
-        break  # Encerra o loop principal
+        elif opcao_selecionada == "8":
+            print("Você selecionou 'Outros'. Como posso ajudar?")
+           
 
-    else:
-        print("Desculpe, opção inválida. Por favor, escolha uma opção válida.")
+        elif opcao_selecionada == "sair":
+            print("Obrigado por utilizar nosso assistente virtual. Até mais!")
+            break  # Encerra o loop principal
+
+        else:
+            print("Desculpe, opção inválida. Por favor, escolha uma opção válida.")
+
+if _name_ == "_main_":
+    conversa_com_robot()
